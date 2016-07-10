@@ -1,0 +1,44 @@
+Codebook for week 4 assignment
+==============================
+
+
+Overview
+--------
+
+The script run_analysis.R creates 2 data frames. The first one, merged_df, contains both the training and test data sets from raw data collected from the accelerometer and gyroscope of the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+The script run_analysis.R contains comments describing every significant step taken to create the dataframes.
+
+
+Data Dictionary for merged_df
+-----------------------------
+
+activityType: a string converted from number to description using activity_labels.txt i.e:
+1 = WALKING
+2 = WALKING_UPSTAIRS
+3 = WALKING_DOWNSTAIRS
+4 = SITTING
+5 = STANDING
+6 = LAYING
+
+subject: a number that represents the volunteers, taken from the original data sets.
+
+other columns: numbers, the rest of the columns are the mean and standard deviation columns taken as is from the original data sets. Every instance of mean and standard deviation in the variable name was included. For a complete description refer to the features_info.txt file.
+
+
+Data Dictionary for averages_df
+-------------------------------
+
+activityType: a string converted from number to description using activity_labels.txt i.e:
+1 = WALKING
+2 = WALKING_UPSTAIRS
+3 = WALKING_DOWNSTAIRS
+4 = SITTING
+5 = STANDING
+6 = LAYING
+
+subject: a number that represents the volunteers, taken from the original data sets.
+
+other columns: numbers, the average of each variable for each activity and each subject.
