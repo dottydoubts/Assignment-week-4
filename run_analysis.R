@@ -72,3 +72,7 @@ grp_cols <- c("activityType","subject")
 dots <- lapply(grp_cols, as.symbol)
 averages_df <- group_by_(merged_df, .dots=dots)
 averages_df <- summarise_each(averages_df, funs(mean))
+
+setwd("/week4")
+write.table(averages_df, "averages.txt", row.name=FALSE)
+unlink("averages.txt")
